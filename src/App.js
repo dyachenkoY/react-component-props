@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ItemClass from "./components/Item-class";
+import ItemFunc from "./components/item-func";
+
+const laptop = {
+  name: "Apple MacBook Pro 16",
+  description: "Modern laptop from the Apple",
+  cost: "2500$",
+  inStock: 0,
+};
+
+const phone = {
+  name: "Iphone 14 Pro",
+  description: "Modern smartphone from the Apple",
+  cost: "2000$",
+  inStock: 3,
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ItemFunc item={laptop} />
+      <ItemClass item={phone} />
+    </>
   );
 }
 
